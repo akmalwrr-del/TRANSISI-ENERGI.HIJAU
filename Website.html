@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edukasi Energi</title>
+
+<style>
+    /* ======== GLOBAL ======== */
+    body {
+        margin: 0;
+        font-family: "Poppins", Arial, sans-serif;
+        background: #f5f7ff;
+        color: #333;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .dark {
+        background: #0f0f1a;
+        color: white;
+    }
+
+    header {
+        background: linear-gradient(90deg, #005bea, #00c6fb);
+        padding: 50px;
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    nav {
+        background: #003f8c;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color:  grey;
+        transform: scale(1.1);
+    }
+
+    /* ======== SECTION ======== */
+    section {
+        padding: 30px;
+        display: none;
+        animation: fade 0.4s;
+    }
+
+    .active {
+        display: block;
+    }
+
+    @keyframes fade {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .card {
+        background: white;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        max-width: 900px;
+        margin: auto;
+        transition: 0.3s;
+    }
+
+    .dark .card {
+        background: #1e1e2d;
+        color: #eee;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+    h2 {
+        color: #005bea;
+    }
+
+    .dark h2 {
+        color: #4fa3ff;
+    }
+
+    ul li, ol li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    /* ======== BUTTON DARK MODE ======== */
+    #darkToggle {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #005bea;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 60px;
+        cursor: pointer;
+        font-size: 15px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        transition: 0.3s;
+    }
+
+    #darkToggle:hover {
+        transform: scale(1.1);
+    }
+
+    footer {
+        background: #003f8c;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EDUKASI ENERGI</h1>
+    <p>Belajar Jenis-Jenis Energi dan Perubahannya Dengan Cara Menarik</p>
+</header>
+
+<nav>
+    <a onclick="show('beranda')">Beranda</a>
+    <a onclick="show('materi')">Materi</a>
+    <a onclick="show('Pengertian')">Pengertian Energi</a>
+    <a onclick="show('perubahan')">Perubahan Energi</a>
+    <a onclick="show('Jenis-Jenis Energi')">Jenis-Jenis Energi</a>
+    <a onclick="show ('Contoh dalam kehidupan')">Contoh dalam kehidupan</a>
+</nav>
+
+<!-- BERANDA -->
+<section id="beranda" class="active">
+    <div class="card">
+        <h2>Selamat Datang!</h2>
+        <p>
+            Website ini dibuat untuk mempelajari energi secara mudah dan menarik.
+            Kamu dapat memilih materi melalui menu di atas.
+        </p>
+        <h3>Apa yang bisa kamu pelajari?</h3>
+        <ul>
+            <li>Pengertian energi</li>
+            <li>Jenis-jenis energi</li>
+            <li>Perubahan bentuk energi</li>
+            <li>Contoh dalam kehidupan sehari-hari</li>
+        </ul>
+    </div>
+</section>
+
+<!-- MATERI -->
+<section id="materi">
+    <div class="card">
+        <h2>Pilih Materi Energi</h2>
+
+        <ul>
+            <li onclick="show('Pengertian')" style="cursor:pointer; color:#005bea;">
+                ▶ Pengertian Energi
+            <li onclick="show('perubahan')" style="cursor:pointer; color:#005bea;">
+                ▶ Perubahan Energi
+            <li onclick="show('Jenis-Jenis Energi')" style="cursor:pointer; color:#005bea;">
+                ▶ Jenis-Jenis
+            <li onclick="show('Contoh dalam kehidupan')" style="cursor:pointer; color:#005bea;">
+                ▶ Contoh dalam kehidupan
+                
+            </li>
+        </ul>
+
+        <p>Klik salah satu materi untuk mulai belajar.</p>
+    </div>
+</section>
+
+<!-- PERUBAHAN ENERGI -->
+<section id="perubahan">
+    <div class="card">
+        <h2>Perubahan Energi</h2>
+        <p>
+            Perubahan energi terjadi ketika satu bentuk energi berubah ke bentuk lainnya,
+            namun jumlah energi tetap (Hukum Kekekalan Energi).
+        </p>
+
+        <h3>Contoh Perubahan Energi</h3>
+        <p>
+        Jenis-jenis perubahan energi
+  Berikut contoh perubahan energi secara singkat:
+
+1. Energi listrik → energi cahaya
+   Contoh: Lampu menyala.
+
+2. Energi kimia → energi panas
+   Contoh: Kompor gas menghasilkan api.
+
+3. Energi gerak → energi listrik
+   Contoh: Dinamo sepeda menghasilkan listrik saat roda berputar.
+
+4. Energi cahaya → energi kimia
+   Contoh: Fotosintesis pada tumbuhan.
+
+5. Energi listrik → energi gerak
+   Contoh: Kipas angin berputar.
+
+6. Energi potensial → energi geraks
+   Contoh: Batu jatuh dari ketinggian.
+        <p>
+             <h4>Penjelasan</h4>
+        <p>
+            Materi perubahan energi membahas transformasi energi dari satu bentuk ke bentuk lain, sesuai dengan hukum kekekalan energi bahwa energi tidak dapat diciptakan atau dimusnahkan. Contoh umum meliputi energi listrik menjadi gerak (kipas angin), energi kimia menjadi panas (kompor gas), dan energi gerak menjadi listrik (PLTA). 
+‎  Jenis-jenis perubahan energi
+        <p>
+    </div>
+</section>
+
+</section>
+
+<!-- PENGERTIAN ENERGI -->
+<section id="Pengertian">
+    <div class="card">
+        <h2>Pengertian Energi</h2>
+        <p>
+            Energi adalah kemampuan suatu benda atau sistem untuk melakukan kerja atau usaha, 
+            serta menyebabkan perubahan. Dalam ilmu fisika, energi dapat berupa energi kinetik 
+            (gerak), energi potensial (tersimpan), energi panas, energi listrik, energi kimia, dan bentuk
+            lainnya. Sifat mendasar energi adalah dapat berubah bentuk, tetapi tidak dapat 
+           diciptakan atau dimusnahkan.
+        </p>
+
+        <h3>Kesimpulan</h3>
+        <p>
+            Materi perubahan energi membahas transformasi energi dari satu bentuk ke bentuk lain, sesuai dengan hukum kekekalan energi bahwa energi tidak dapat diciptakan atau dimusnahkan. Contoh umum meliputi energi listrik menjadi gerak (kipas angin), energi kimia menjadi panas (kompor gas), dan energi gerak menjadi listrik (PLTA). 
+‎  Jenis-jenis perubahan energi
+        <p>
+    </div>
+</section>
+
+
+
+<!-- JENIS-JENIS ENERGI -->
+<section id="Jenis-Jenis Energi">
+    <div class="card">
+        <h2>Jenis-Jenis Energi</h2>
+        <p>
+            Berikut jenis-jenis energi secara singkat:
+
+Energi Kinetik – Energi yang dimiliki benda karena bergerak.
+
+Energi Potensial – Energi yang dimiliki benda karena posisi atau ketinggiannya.
+
+Energi Panas (Termal) – Energi yang berasal dari suhu atau panas.
+
+Energi Cahaya – Energi yang dihasilkan oleh sumber cahaya (matahari, lampu).
+
+Energi Kimia – Energi yang tersimpan dalam bahan kimia (makanan, baterai, bahan bakar).
+
+Energi Listrik – Energi yang berasal dari aliran listrik.
+
+Energi Bunyi – Energi yang dihasilkan oleh getaran dan menghasilkan suara.
+
+Energi Nuklir – Energi dari reaksi inti atom.
+
+Energi Mekanik – Gabungan energi kinetik dan potensial.
+
+        </p>
+
+        <h3>Penjelasan</h3>
+        <p>
+            Materi perubahan energi membahas transformasi energi dari satu bentuk ke bentuk lain, sesuai dengan hukum kekekalan energi bahwa energi tidak dapat diciptakan atau dimusnahkan. Contoh umum meliputi energi listrik menjadi gerak (kipas angin), energi kimia menjadi panas (kompor gas), dan energi gerak menjadi listrik (PLTA). 
+‎  Jenis-jenis perubahan energi
+        <p>
+    </div>
+</section>
+<!-- CONTOH DALAM KEHIDUPAN -->
+<section id="Contoh dalam kehidupan">
+    <div class="card">
+        <h2>Contoh dalam kehidupan</h2>
+        <p>
+     Berikut contoh perubahan energi dalam kehidupan sehari-hari:
+
+     1.Lampu menyala → energi listrik menjadi energi cahaya.
+     2.Kipas angin berputar → energi listrik menjadi energi gerak.
+     3.Setrika panas → energi listrik menjadi energi panas.
+     4.HP di-charge → energi listrik menjadi energi kimia (baterai terisi).
+     5.Memasak dengan kompor gas → energi kimia menjadi energi panas.
+     6.Sepeda saat direm → energi gerak berubah menjadi energi panas karena gesekan.
+     7.Menggosok tangan → energi gerak menjadi panas.
+     8.Mobil bergerak → energi kimia dari bensin menjadi energi gerak.
+     9.Panel surya → energi cahaya matahari menjadi energi listrik.
+     10.Jam dinding pegas → energi potensial pegas menjadi energi gerak.
+        </p>
+
+        <h3>Penjelasan</h3>
+        <p>
+            Perubahan energi adalah proses berubahnya satu 
+            bentuk energi menjadi bentuk energi lain agar dapat digunakan.
+        <p>
+    </div>
+</section>
+
+
+</section>
+
+<footer>
+    © 2025 Website Edukasi Energi | Belajar Sains dengan Mudah
+</footer>
+
+<button id="darkToggle" onclick="toggleDark()">Dark Mode</button>
+
+<script>
+function show(menu) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    document.getElementById(menu).classList.add("active");
+}
+
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
